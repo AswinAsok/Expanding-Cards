@@ -36,6 +36,7 @@ body {
   height: 80vh;
   border-radius: 50px;
   color: white;
+  box-shadow: 3px 10px 20px #888888;
   cursor: pointer;
   flex: 0.5;
   margin: 10px;
@@ -81,6 +82,7 @@ body {
   margin-bottom: 15px;
   max-width: 100%;
   width: 350px;
+  
 }
 
 .progress-container::before {
@@ -134,6 +136,7 @@ body {
   padding: 8px 30px;
   margin: 5px;
   font-size: 14px;
+  box-shadow: 3px 10px 20px #888888;
 }
 
 .btn:active {
