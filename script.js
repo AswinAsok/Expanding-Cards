@@ -18,41 +18,32 @@ panels.forEach((panel, index) => {
 function removeActiveClasses() {
   panels.forEach((panel) => {
     panel.classList.remove("active");
+    currentActive = 1
   });
 }
 
 let currentActive = 1;
-let slideActive = 0
+
 
 next.addEventListener("click", () => {
   currentActive++;
-  slideActive++;
 
   if (currentActive > circles.length) {
     currentActive = circle.length;
   }
 
-  if (slideActive > panels.length-1) {
-    slideActive = panels.length;
-  }
-
-  panels[slideActive].click();
+  panels[currentActive-1].click();
   update();
 });
 
 prev.addEventListener("click", () => {
   currentActive--;
-  slideActive--;
 
   if (currentActive < 1) {
     currentActive = 1;
   }
 
-  if (slideActive < 0) {
-    currentActive = 0;
-  }
-
-  panels[slideActive].click();
+  panels[currentActive-1].click();
   update();
 });
 
