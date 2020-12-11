@@ -109,6 +109,9 @@ function blurring() {
 
     if(load > 99) {
         clearInterval(int)
+        document.getElementById("loading-text").remove();
+        console.log("Amazing")
+        document.getElementById("main-container").style.zIndex = "1";
     }
 
     loadText.innerText = `${load}%`
@@ -120,3 +123,4 @@ function blurring() {
 const scale = (num, in_min, in_max, out_min, out_max) => {
     return ((num - in_min) * (out_max - out_min)) / (in_max - in_min) + out_min
   }
+
