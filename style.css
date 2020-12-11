@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family-Muli&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Muli&display=swap");
 
 * {
   box-sizing: border-box;
@@ -167,7 +167,7 @@ body {
   width: 100vw;
   min-height: 100vh;
   padding-left: 80px;
-  padding-top: 25px;
+  padding-top: 36px;
 }
 
 .content.show-nav {
@@ -264,3 +264,41 @@ a {
   background-color: #333333;
   color: white;
 }
+
+
+.search .input {
+  border: 3px solid var(--line-border-empty);
+  
+  border: 0ch;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: inherit;
+  box-shadow: 3px 10px 20px #c0c0c0;
+  padding: 8px 30px;
+  margin: 5px;
+  font-size: 14px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 75px;
+  transition: width 0.3s ease;
+
+}
+
+.search .btn{
+  box-shadow: 3px 10px 20px #c0c0c0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: tansform 0.3 ease;
+}
+.btn:focus, .input:focus {
+  outline: none;
+}
+
+.search.active .input{
+  width: 200px;
+  transform: translateX(-75px);
+}
+
+
