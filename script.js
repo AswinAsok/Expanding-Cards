@@ -8,22 +8,20 @@ panels.forEach((panel, index) => {
   panel.addEventListener("click", () => {
     removeActiveClasses();
     panel.classList.add("active");
-    currentActive = index+1;
-    console.log(currentActive)
-    update()
+    currentActive = index + 1;
+    console.log(currentActive);
+    update();
   });
 });
-
 
 function removeActiveClasses() {
   panels.forEach((panel) => {
     panel.classList.remove("active");
-    currentActive = 1
+    currentActive = 1;
   });
 }
 
 let currentActive = 1;
-
 
 next.addEventListener("click", () => {
   currentActive++;
@@ -32,7 +30,7 @@ next.addEventListener("click", () => {
     currentActive = circle.length;
   }
 
-  panels[currentActive-1].click();
+  panels[currentActive - 1].click();
   update();
 });
 
@@ -43,7 +41,7 @@ prev.addEventListener("click", () => {
     currentActive = 1;
   }
 
-  panels[currentActive-1].click();
+  panels[currentActive - 1].click();
   update();
 });
 
@@ -73,23 +71,27 @@ function update() {
   }
 }
 
+const open = document.getElementById("open");
+const close = document.getElementById("close");
+const content = document.querySelector(".content");
 
-const open = document.getElementById('open')
-const close = document.getElementById('close')
-const content = document.querySelector('.content')
+open.addEventListener("click", () => content.classList.add("show-nav"));
 
-open.addEventListener('click', () => content.classList.add('show-nav'))
+close.addEventListener("click", () => content.classList.remove("show-nav"));
 
-close.addEventListener('click', () => content.classList.remove('show-nav'))
+const search = document.querySelector(".search");
+const sbtn = document.querySelector(".search-btn");
+const input = document.querySelector(".input");
 
-
-
-const search  =document.querySelector('.search')
-const btn  =document.querySelector('.btn')
-const input  =document.querySelector('.input')
-
-
-btn.addEventListener('click', () => {
-    search.classList.toggle('active')
-    imput.focus()
-})
+sbtn.addEventListener("click", () => {
+  if (input.value == "") {
+    search.classList.toggle('active');
+  }else{
+    panels[input.value-1].click();
+    input.value = "";
+    search.classList.toggle('active');
+  }
+  
+  
+  input.focus();
+});
