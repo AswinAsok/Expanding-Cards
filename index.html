@@ -13,98 +13,113 @@
     <title>Expanding Cards</title>
   </head>
   <body>
-    <div class="search">
-      <input type="number" class="input" id="panel-no" placeholder="Search.....">
-      <button class="btn search-btn">
-        <i class="fas fa-search"></i>
-      </button>
+
+    <div class="loading-text">0%</div>
+
+    <div class="main-container">
+      <div class="search">
+        <input
+          type="number"
+          class="input"
+          id="panel-no"
+          placeholder="Search....."
+        />
+        <button class="btn search-btn">
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
+
+      <div class="content">
+        <div class="ncircle-container">
+          <div class="ncircle">
+            <button id="close">
+              <i class="fas fa-times"></i>
+            </button>
+
+            <button id="open">
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="container">
+          <div
+            class="panel active"
+            style="
+              background-image: url('https://images.unsplash.com/photo-1464821541677-ceb53bcf1541?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80');
+            "
+          >
+            <h3>Explore The World</h3>
+          </div>
+
+          <div
+            class="panel"
+            style="
+              background-image: url('https://images.unsplash.com/photo-1526943604017-955071a1fb3e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80');
+            "
+          >
+            <h3>Sunny Day</h3>
+          </div>
+
+          <div
+            class="panel"
+            style="
+              background-image: url('https://images.unsplash.com/photo-1509838174235-432f709c7bfd?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80');
+            "
+          >
+            <h3>Falling Leaves</h3>
+          </div>
+
+          <div
+            class="panel"
+            style="
+              background-image: url('https://images.unsplash.com/photo-1598934386952-1deb6131cf10?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80');
+            "
+          >
+            <h3>Rainy Evenings</h3>
+          </div>
+
+          <div
+            class="panel"
+            style="
+              background-image: url('https://images.unsplash.com/photo-1500068015788-f677c0108ff6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80');
+            "
+          >
+            <h3>Foggy Forests</h3>
+          </div>
+        </div>
+
+        <div class="pcontainer">
+          <div class="progress-container">
+            <div class="progress" id="progress"></div>
+            <div class="circle glow">1</div>
+            <div class="circle">2</div>
+            <div class="circle">3</div>
+            <div class="circle">4</div>
+            <div class="circle">5</div>
+          </div>
+
+          <button class="btn" id="prev" disabled>Prev</button>
+          <button class="btn" id="next">Next</button>
+        </div>
+      </div>
+
+      <nav>
+        <ul>
+          <li><i class="fas fa-home"></i>Home</li>
+          <li>
+            <i class="fas fa-user-alt"></i
+            ><a href="https://www.instagram.com/_aswin_asok_/"> About Me</a>
+          </li>
+          <li>
+            <i class="fas fa-star"></i
+            ><a href="https://github.com/AswinAsok/Expanding-Cards"
+              >Star This Repo</a
+            >
+          </li>
+        </ul>
+      </nav>
     </div>
-    <div class="content">
-
-    
-
-      <div class="ncircle-container">
-        <div class="ncircle">
-          <button id="close">
-            <i class="fas fa-times"></i>
-          </button>
-
-          <button id="open">
-            <i class="fas fa-bars"></i>
-          </button>
-        </div>
-      </div>
-
-      <div class="container">
-        <div
-          class="panel active"
-          style="
-            background-image: url('https://images.unsplash.com/photo-1464821541677-ceb53bcf1541?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80');
-          "
-        >
-          <h3>Explore The World</h3>
-        </div>
-
-        <div
-          class="panel"
-          style="
-            background-image: url('https://images.unsplash.com/photo-1526943604017-955071a1fb3e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80');
-          "
-        >
-          <h3>Sunny Day</h3>
-        </div>
-
-        <div
-          class="panel"
-          style="
-            background-image: url('https://images.unsplash.com/photo-1509838174235-432f709c7bfd?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80');
-          "
-        >
-          <h3>Falling Leaves</h3>
-        </div>
-
-        <div
-          class="panel"
-          style="
-            background-image: url('https://images.unsplash.com/photo-1598934386952-1deb6131cf10?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80');
-          "
-        >
-          <h3>Rainy Evenings</h3>
-        </div>
-
-        <div
-          class="panel"
-          style="
-            background-image: url('https://images.unsplash.com/photo-1500068015788-f677c0108ff6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80');
-          "
-        >
-          <h3>Foggy Forests</h3>
-        </div>
-      </div>
-
-      <div class="pcontainer">
-        <div class="progress-container">
-          <div class="progress" id="progress"></div>
-          <div class="circle glow">1</div>
-          <div class="circle">2</div>
-          <div class="circle">3</div>
-          <div class="circle">4</div>
-          <div class="circle">5</div>
-        </div>
-
-        <button class="btn" id="prev" disabled>Prev</button>
-        <button class="btn" id="next">Next</button>
-      </div>
-
-    </div>
-
-    <nav>
-      <ul>
-        <li><i class="fas fa-home"></i>Home</li>
-        <li><i class="fas fa-user-alt"></i><a href="https://www.instagram.com/_aswin_asok_/"> About Me</a></li>
-        <li><i class="fas fa-star"></i><a href="https://github.com/AswinAsok/Expanding-Cards">Star This Repo</a></li>
-      </ul>
-    </nav>
 
     <script src="script.js"></script>
   </body>

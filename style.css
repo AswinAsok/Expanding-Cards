@@ -311,4 +311,22 @@ a {
   transform: translateX(-75px);
 }
 
+.loading-text{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin: 0;
+  font-size: 50px;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  color:var(--line-border-fil);
+}
+
+.main-container{
+  z-index: -1;
+  position: relative;
+  filter: blur(0px);
+}
 
